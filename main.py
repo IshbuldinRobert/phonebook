@@ -97,6 +97,7 @@ def delete_contact():
         interface()
 
 
+# Копировать контакт в другой файл
 def copy_contact():
     with open('c:/programist/Study/Python/seminars/seminar_8_work_with_files/phonebook.txt', 'r', encoding='utf-8') as file:
         contacts = dict(enumerate([i for i in file.read().strip().split('\n')], 1))
@@ -110,6 +111,7 @@ def copy_contact():
         with open('c:/programist/Study/Python/seminars/seminar_8_work_with_files/new_phonebook.txt', 'a', encoding='utf-8') as new_file:
             new_file.write(contacts[int(contact_for_copy)] + '\n')
         print('\n' + 'Контакт скопирован :)')
+
     if __name__ == '__main__':
         interface()
 
